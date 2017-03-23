@@ -11,21 +11,13 @@ function configureStore(history, initialState){
     rootReducer,
     initialState,
     applyMiddleware(
-      socketMiddleware,
       thunk,
       routerMiddleware(history),
       ReduxPromise,
-      crashReporter
+      crashReporter,
+      logger
     )
   )
-
-  // Uncomment for Webpack hot module replacement.
-  // if (module.hot) {
-  //   module.hot.accept('../reducers/root_reducer', () => {
-  //     const nextRootReducer = require('../reducers/root_reducer').default
-  //     store.replaceReducer(nextRootReducer)
-  //   })
-  // }
 
   return store
 }

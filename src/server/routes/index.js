@@ -58,7 +58,7 @@ function renderFullPage(html, initialState) {
         <meta http-equiv="X-UA-Compatible" content="IE=11">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" media="all" />
-        <title>Kafka Visualization</title>
+        <title>Starter App</title>
         <style>
           html { font-size: 16px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 200;}
           html, body, #root { margin: 0; }
@@ -66,7 +66,7 @@ function renderFullPage(html, initialState) {
         </style>
       </head>
       <body>
-        <div id="root">${ html } hi</div>
+        <div id="root">${ html }</div>
         <script>
           window.__initialState__ = ${JSON.stringify(initialState)}
         </script>
