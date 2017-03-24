@@ -87,7 +87,10 @@ module.exports = function(version){
       clientConfig.plugins.push(
         new webpack.IgnorePlugin(/^\.\/locale$/,/moment$/),
         new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: `vendor.bundle-${ version }.js`}),
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin({
+          sourceMap: true,
+          mangle: true
+        })
       )
       clientConfig.entry.client.push('./client.js')
       clientConfig.entry.vendor = [
